@@ -1,3 +1,5 @@
+
+
 //Build cards objects
 function Card(src, value) {  //Function constructor
   this.frontImage = src;
@@ -12,18 +14,25 @@ function makeCardsArray(details) { //Build new card objects and put them in arra
   return cardsArray;  
 }
 
+document.getElementById("boardId").classList.add("board-opacity");
+
 fetch('http://localhost:3000/getting-cards')
   .then(res => res.json())
   .then((data) => {
-    onNavbarClick(data[1].classic2cards);
+    /*onNavbarClick(data[1].classic2cards);*/
     document.getElementById("classicList1").onclick =function() {onNavbarClick(data[0].classic1cards)};
     document.getElementById("classicList2").onclick =function() {onNavbarClick(data[1].classic2cards)};
+
+    /* hide spinner and cancel board opacity*/
+    document.getElementById("loadingSpinner").setAttribute("class", "hideLoadSinner");
+    document.getElementById("boardId").classList.remove("board-opacity");
   })
 
   .catch(err => {
     console.log("Fetch error:", err);
-    document.getElementById("hiddenLoading").removeAttribute('id');
-    document.getElementById("boardId").classList.add("board-opacity");
+    
+    document.getElementById("loadingSpinner").setAttribute("class", "hideLoadSinner");
+    document.getElementById("boardId").classList.remove("board-opacity");
 })
 
 

@@ -27,9 +27,7 @@ td img {
   border-radius: 5px;
   /*border: 1px solid #868d8a;*/
 }
-.board-opacity {
-  opacity:0.3;
-}
+
   /*Game over message*/
 #gameEndMessage {
   position: absolute;
@@ -49,15 +47,17 @@ td img {
 }
 
 /*loading spinner*/
-#hiddenLoading {
+.hideLoadSinner {
   display: none !important;
+}
+.board-opacity { 
+  opacity:0.3;
 }
 .loading {
   display: flex;
   justify-content: center;
 }
 .loading--full-height {
-  position: absolute;
   position: absolute;
   top: 200px;
   left: 33.5%;
