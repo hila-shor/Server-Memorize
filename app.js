@@ -1,9 +1,52 @@
 
+const { response } = require('express');
 const express = require('express');
+const mongoose = require('mongoose');
+const User = require('./models/users');
+
+// express app
 const app = express();
 
-// listen for request
-app.listen(3000);
+//connect to mongodb& listen for requests
+const dbURI = "mongodb+srv://netninja:test4567@nodeninja.3bvwzp2.mongodb.net/memorize?retryWrites=true&w=majority";
+
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((result) => app.listen(3000))
+  .catch((err) => console.log(err));
+
+// middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+//routes
+/*app.get('/sign-up', (req, res) => {
+  res.sendFile('signUp.html', {root:__dirname});
+});
+*/
+app.post('/users-information', (req, res) => {
+    console.log(req.body);
+    res.send(req.body)
+}); 
+
+  // mongoose & mongo tests
+// save from server to mongodb database 
+/*app.get('/add-user', (req, res) => {
+  const user = new User({
+    name: 'Ziv Shor',
+    email: 'ziv@gmail.com',
+    password: 'zivush13'
+  })
+
+  user.save()
+    .then(result => {
+      res.send(result);
+  })
+    .catch(err => {
+      console.log(err);
+    });
+});*/
+
+
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

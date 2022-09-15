@@ -1,0 +1,160 @@
+body {
+  background-color: #e0e3e7;
+  padding: 0;
+}
+body {
+  /*font-family: "Bangers", cursive;
+  font-family: "Caesar Dressing", cursive;
+  font-family: "Monoton", cursive;
+  font-family: "Press Start 2P", cursive;*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*top style*/
+.top {
+  padding: 10px;
+  margin: auto;
+}
+.top li {   /*single item then i dont need inline display for now*/
+  /*display: inline;*/
+}
+/*.memorize {
+  position: relative;
+  left: 5%;
+  width: 40%;
+  font-family: "Caesar Dressing", cursive;
+  font-size:4vw;
+  color: #6a718c;
+}*/
+.logopic img {
+  width: 15%;
+  margin: o;
+  position: relative;
+  left: 25%;
+}
+.line-decoration hr{
+  width: 100%;
+  border: 3px solid #8cc28d;
+  width: 98%;
+  border-radius: 5px;
+}
+
+/*sign in*/
+
+.signin-container{
+  /*position: relative;*/
+  top: 100px;
+  margin: auto;
+  width: 400px;
+  margin-bottom: 100px;
+}
+
+.signin-title{
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.signin-title p{
+  color: #6a718c;
+  margin:10px;
+}
+
+/*.signin-form{
+  overflow: hidden;
+}*/
+form label {
+  line-height: 120%;
+  margin-bottom: 8px;
+  color: #6a718c;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+form input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 98%;
+  font-size: 18px;
+  
+}
+.forgot-pwd {
+  text-align: right;
+}
+#submitbtm {
+  width: 100%; 
+}
+.line-decoration,p {
+  text-align: center;
+  font: bolder;
+  
+}
+#submitbtm {
+  background-color:#f5e17e ;
+  border: 2px solid #6a718c;
+  color:#6a718c ;
+  font-weight: 50px;
+  font: bolder;
+}
+/*sign-up options*/
+
+.signin-options ul {
+  padding: 0;
+}
+
+.signin-options li {
+  display: inline;
+  justify-content: space-between;
+}
+
+.signin-options li img {
+  width: 110px;
+}
+
+.link-signin  {
+  padding: 0;
+  text-align: center;
+}
+.link-signin li {
+  display: inline;
+  font-size: 19px;
+  color:#6a718c;
+  
+}
+
+.signin-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.terms{
+  text-align: center;
+  
+}
+.terms ul {
+  padding: 0;
+}  
+.terms li{
+  display: inline;
+  font-size: 19px;
+  color:#6a718c;
+  text-align: center;
+}
+
+
+/*.signin {
+  width: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6d75ae;
+  font-size:3vw;
+  font-weight: bold;
+}
+
+.signinForm {
+  width: 40%;
+  font-family:  Arial, Helvetica, sans-serif;
+  color: #6d75ae;
+  font-size:20px;
+  margin: auto;
+  margin-top: 5%;
+}*/

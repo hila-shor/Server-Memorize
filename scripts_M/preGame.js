@@ -13,30 +13,31 @@ function makeCardsArray(details) { //Build new card objects and put them in arra
   }
   return cardsArray;  
 }
-
+/*board opacity for loading spinner stage*/
 document.getElementById("boardId").classList.add("board-opacity");
 
+/*getting images from server*/
 fetch('http://localhost:3000/getting-cards')
   .then(res => res.json())
   .then((data) => {
-    /*onNavbarClick(data[1].classic2cards);*/
+  /*onNavbarClick(data[1].classic2cards);*/
     document.getElementById("classicList1").onclick =function() {onNavbarClick(data[0].classic1cards)};
     document.getElementById("classicList2").onclick =function() {onNavbarClick(data[1].classic2cards)};
 
-    /* hide spinner and cancel board opacity*/
+  /* hide spinner and cancel board opacity*/
     document.getElementById("loadingSpinner").setAttribute("class", "hideLoadSinner");
     document.getElementById("boardId").classList.remove("board-opacity");
   })
 
   .catch(err => {
     console.log("Fetch error:", err);
-    
+  /* hide spinner and cancel board opacity*/
     document.getElementById("loadingSpinner").setAttribute("class", "hideLoadSinner");
     document.getElementById("boardId").classList.remove("board-opacity");
 })
 
 
-// Defulte game- classic list1 
+// Defulte game- math list1 
 var details = math1cards;
 
 var cardsArray = makeCardsArray(details);

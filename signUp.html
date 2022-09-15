@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+    <link href="style_M/signup.css" type="text/css" rel="stylesheet">
+    
+    <!-- google font- assistant-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500&family=Bangers&family=Caesar+Dressing&family=Monoton&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap'); 
+      p, h1, h2, h3, h4, ol, li, ul { 
+        font-family: Assistant, Assistant, sans-serif; 
+      }   
+    </style>
+
+    <title>Memo-rize | sign up</title>
+
+  </head>
+
+  <body>
+    <!-- Top: logo picture-->
+    <div class="top">
+      <ul  style= list-style-type:none;>
+        <!--<li class="memorize">MEMO-RIZE</li>-->
+        <li class="logopic"> <img src= "images_M/logoImage.png"></li>
+        <!--<li class="signUp">Sign Up</li>-->
+      </ul>
+
+      <div class="line-decoration">
+        <hr>
+      </div>
+
+    </div>
+
+    <!-- sinup -->
+    <div class="signup-container">
+
+      <div class="signup-title">
+        <p>Sign up</p>
+      </div>
+
+      <form class ="signup-form" action="http://localhost:3000/users-information" method="POST">
+        <div class="email">
+          <label for="email">Email</label><br><br>
+          <input type="email" id="email" name="email" required><br><br>
+        </div>
+        <div class="full-name">
+          <label for="fullName">Name</label><br><br>
+          <input type="text" id="fullName" name="fullName" required><br><br>
+        </div>
+        <div class="password">
+          <label for="pwd">Password</label><br><br>
+          <input type="password" id="pwd" name="password"><br><br>
+        </div><br>
+
+        <input id="submitbtm" type="submit" value="Sign Up">
+      </form> <br>
+      
+      <p>or</p>
+
+      <hr>
+
+      <div class="signup-options">
+        <ul  style= list-style-type:none;>
+          <li class="google-img"> <img src= "images_M\sign-up\google_signup.png"></li>
+          <li class="apple-img"> <img src= "images_M\sign-up\apple.png"></li>
+          <li class="facebook-img"> <img src= "images_M\sign-up\facebook.png"></li>
+        </ul>
+      </div>
+
+      <ul  class="link-signin"style= list-style-type:none;>
+        <li>Already have an account?</li>
+        <li><a href="signIn.html">Login</a></li>
+      </ul>
+
+    </div>
+
+    <div class="terms" >
+      <ul  style= list-style-type:none>
+        <li>By signing up you agree to our</li>
+        <li><a href="">Terms of Use</a></li>
+      </ul> 
+    </div>
+
+
+  </body>
